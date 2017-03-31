@@ -1,0 +1,232 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML >
+<html >
+<head>
+
+  <link href="../../css/bootstrap.min.css" rel='stylesheet' type='text/css'/>
+  <link href="../../css/style.css" rel='stylesheet' type='text/css'/>
+  <link href="../../css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/icon-font.min.css" type='text/css'/>
+</head>
+<body>
+<div class="page-container">
+  <!--/content-inner-->
+  <div class="left-content">
+    <div class="inner-content">
+      <!-- header-starts -->
+      <div class="header-section">
+        <!-- top_bg -->
+        <div class="top_bg">
+
+          <div class="header_top">
+            <div class="top_right">
+              <ul>
+                <li><a href="contact.html">help</a></li>
+                |
+                <li><a href="contact.html">Contact</a></li>
+                |
+                <li><a href="checkout.html">Delivery information</a></li>
+                |
+                <div class="header-right">
+
+                <li >
+                  <a  (click)="lala()" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">3</span></a>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                  </div>
+                </li>
+
+
+
+                    <div class="clearfix"> </div>
+
+                </div>
+              </ul>
+            </div>
+            <div class="top_left">
+              <h2><span></span> Call us : 012 0324 4599</h2>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+
+          <!-- status -->
+        </div>
+      </div>
+      <!-- Header -->
+      <div class="header_bg">
+
+        <div class="header">
+          <div class="head-t">
+            <div class="logo">
+              <a href="index.html"><img src="http://m.vanlanguni.edu.vn/images/vanlang/logo-2x-vanlanguni8.png"
+                                        class="img-responsive" alt=""> </a>
+            </div>
+            <!-- start header_right -->
+            <div class="header_right">
+              <div class="rgt-bottom">
+
+                <div class="create_btn">
+                  {{username.fullname}}
+                  <a (click)="logout()">Logout</a>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+
+
+              <div class="search-box">
+                <form class="input">
+                  <input class="sb-search-input input__field--madoka" placeholder="Search..." type="search" id="input-31" />
+                  <label class="input__label" for="input-31">
+                    <svg class="graphic" width="100%" height="100%" viewBox="0 0 404 77" preserveAspectRatio="none">
+                      <path d="m0,0l404,0l0,77l-404,0l0,-77z"/>
+
+                    </svg>
+                    <input type="submit" class="buttonsearch" value="">
+                  </label>
+                </form>
+              </div><!--//end-search-box-->
+              <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+      </div>
+      <!--//content-Body-->
+      <div class="content">
+        <div class="monthly-grid">
+          <div class="panel panel-widget">
+            <div class="panel-title">
+              <router-outlet></router-outlet>
+            </div>
+            <div class="panel-body">
+              <!-- status -->
+              <div class="contain">
+                <div class="gantt"></div>
+              </div>
+            </div>
+          </div>
+
+          <!--/sidebar-menu-->
+          <div class="sidebar-menu">
+            <header class="logo1">
+              <a class="sidebar-icon"> <span class="fa fa-bars"></span> </a>
+            </header>
+            <div style="border-top:1px ridge rgba(255, 255, 255, 0.15)"></div>
+            <div class="menu">
+              <ul id="menu">
+                <li><a><i class="fa fa-table"></i> <span>Manage Account</span><span
+                  class="fa fa-angle-right" style="float: right"></span></a>
+                  <ul id="menu-academico-sub1">
+                    <li><a href="CreateAccount" >Create Account</a></li>
+                    <li><a href="EditAccount">Edit Account</a></li>
+                    <li><a href="ChangePassword">Change Password</a></li>
+                    <li><a href="ViewListAccount">View List Account</a></li>
+
+
+                  </ul>
+
+                </li>
+
+
+                <li id="menu-academi2co"><a ><i class="fa fa-file-text-o"></i>
+                  <span>Manage News</span><span
+                    class="fa fa-angle-right" style="float: right"></span></a>
+                  <ul>
+                    <li ><a href="news">Create Draft</a></li>
+                    <li><a href="ViewNews">View News</a></li>
+                    <li><a href="ViewDraft">View Draft</a></li>
+                  </ul>
+                </li>
+
+                <li><a><i class="lnr lnr-pencil"></i> <span>Manage Categories</span><span
+                  class="fa fa-angle-right" style="float: right"></span></a>
+                  <ul>
+                    <li><a href="ViewCategories">View Categories</a></li>
+                    <li><a href="AddCategories">Add Categories</a></li>
+                  </ul>
+                </li>
+
+                <li id="menu-academi1co"><a ><i class="fa fa-file-text-o"></i> <span>Manage Examination</span><span
+                  class="fa fa-angle-right" style="float: right"></span></a>
+                  <ul>
+                    <li><a href="ViewIndividualPoint">View individual point</a></li>
+                    <li><a href="ImportPoint">Import point</a></li>
+                    <li><a href="ExportProfile">Export profile</a></li>
+                    <li><a href="CreateExam">Create Exam</a></li>
+                  </ul>
+                </li>
+
+
+                <li id="menu-acade3mi2co"><a ><i class="lnr lnr-book"></i> <span>Manage FAQ</span><span
+                  class="fa fa-angle-right" style="float: right"></span></a>
+                  <ul>
+                    <li><a href="FAQ">View Question</a></li>
+                    <li><a href="AnswerQuestion">Answer question</a></li>
+                    <li><a href="ApproveQuestion">Approve question</a></li>
+
+                  </ul>
+                </li>
+
+                <li><a ><i class="lnr lnr-envelope"></i> <span>Manage Pop-up</span><span
+                  class="fa fa-angle-right" style="float: right"></span></a>
+                  <ul>
+                    <li><a href="Pop-up">View Pop-up</a></li>
+                    <li><a href="CreatePopup">Create Pop-up</a></li>
+                    <li><a href="ShowPop-up">Show-Hide Pop-up</a></li>
+                    <li><a href="EditPopup">Edit Pop-up</a></li>
+
+                  </ul>
+                </li>
+
+                <li><a ><i class="lnr lnr-chart-bars"></i> <span>Manage Banner</span><span
+                  class="fa fa-angle-right" style="float: right"></span></a>
+                  <ul>
+                    <li><a href="Banner">View Banner</a></li>
+                    <li><a href="CreateBanner">Create Banner</a></li>
+                    <li><a href="ShowBanner">Show-Hide Banner</a></li>
+                    <li><a href="EditBanner">Edit Banner</a></li>
+
+                  </ul>
+                </li>
+
+                <li id="menu-academico"><a ><i class="lnr lnr-layers"></i> <span>Manage Language</span> <span
+                  class="fa fa-angle-right" style="float: right"></span></a>
+                  <ul id="menu-academico-sub">
+                    <li id="menu-academico-avaliacoes"><a href="tabs.html">Tabs</a></li>
+                    <li id="menu-academico-boletim"><a href="calender.html">Calender</a></li>
+
+                  </ul>
+                </li>
+                <li><a><i class="lnr lnr-chart-bars"></i> <span>Manage Homepage</span> <span
+                  class="fa fa-angle-right" style="float: right"></span></a>
+                  <ul>
+                    <li><a href="AddHomepage"> Add Homepage</a></li>
+                    <li><a href="EditHomepage">Edit Homepage</a></li>
+                    <li><a href="DeleteHomepage">Delete Homepage</a></li>
+
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+
+        </div>
+
+        <!--js -->
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

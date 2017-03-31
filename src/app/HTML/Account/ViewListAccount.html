@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../../../css/style.css">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+</head>
+<body>
+
+<form class="example-form">
+
+  <div class="form-title">
+    <h4 style="color:#fafaff;">View Account :</h4>
+  </div>
+  <div class="form-group">
+    <div>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </table>
+      <table>
+        <div class="round_content" *ngFor="let account of data">
+          <tr>
+            <td class="account_fullname">
+              {{account.fullname}}
+            </td>
+            <td class="account_status">{{account.statusactive}}</td>
+            <td class = account_btn>
+              <div class="account_button">
+                <div class="create_btn"><a (click)="editaccount(account._id)">Edit</a></div>
+                <div class="create_btn"><a (click)="Viewdetail(account._id)">View Detail</a></div>
+                <div class="create_btn"><a (click)="showDialog = !showDialog" class="btn">Authorize</a></div>
+
+
+
+
+                <Authorize [(visible)]="showDialog">
+                  <div class="form-title" style="width: 83%;margin-top:30px">
+                    <h4 style="color:#fafaff;width: 100%">Authorize :</h4>
+                  </div>
+
+                  <select name="selector1" id="selector1" class="form-control1" [(ngModel)]="selector1">
+                    <option>System Admin</option>
+                    <option>Content Admin</option>
+                    <option>Editor</option>
+                    <option>Education Staff</option>
+
+                  </select>
+                  <div class="create_btn" style="text-align:center;margin-left: 37%;margin-top:10px"><a (click)="save(account._id)">Save</a></div>
+                </Authorize>
+                <div class="create_btn" *ngIf="account.statusactive"><a (click)="deactivate(account._id)">Deactivate</a></div>
+                <div class="create_btn" *ngIf="!account.statusactive"><a (click)="activate(account._id)">Activate</a></div>
+              </div>
+
+            </td>
+          </tr>
+
+          <!--<td style="width: 50px">-->
+          <!--<div>true</div>-->
+          <!--</td>-->
+
+
+        </div>
+      </table>
+    </div>
+  </div>
+
+</form>
+</body>
+</html>

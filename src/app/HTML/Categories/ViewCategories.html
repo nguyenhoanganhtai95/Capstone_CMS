@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../../../css/style.css">
+<link rel="stylesheet" href="../../../css/bootstrap.min.css">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+</head>
+<body>
+
+<form class="example-form">
+
+  <div class="form-title">
+    <h4 style="color:#fafaff;">View Categories :</h4>
+  </div>
+  <div class="form-group">
+
+    <div>
+      <div class="round_content" *ngFor="let categories of data">
+        <div class="accordion">
+          <div class="panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{categories._id}}" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                 {{categories.name}}
+                </a>
+                <div class ="NewsControls">
+                  <div class="create_btn"><a (click)="create(categories._id)">Create</a></div>
+                  <div class="create_btn"><a (click)="editlv1(categories._id)">Edit </a></div>
+                  <div class="create_btn" (click)="deletelv1(categories._id)"><a>Delete</a></div>
+
+                </div>
+              </h4>
+            </div>
+            <div id="{{categories._id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: 0px;" *ngIf="categories.child!=null" >
+              <div class="panel-body" *ngFor="let cate of categories.child" >
+                <div *ngIf="cate.active">
+                  <li style="color: #0AA5E2" >{{cate.name}}</li>
+                  <div class ="NewsControls">
+                    <div class="create_btn"><a>Edit</a></div>
+                    <div class="create_btn" (click)="deletelv2(cate._id)"><a>Delete</a></div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../../../css/style.css">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+</head>
+<body>
+
+<form class="example-form">
+
+  <div class="form-title">
+    <h4 style="color:#fafaff;">View Detail:</h4>
+  </div>
+  <div class="form-group">
+
+    <div>
+      <div class="round_content" *ngFor="let account of data" >
+      <li>
+        Fullname: {{account.fullname}}
+      </li>
+        <li>
+          Email: {{account.email}}
+        </li>
+        <li>
+          Role: {{account.type}}
+        </li>
+
+      </div>
+
+    </div>
+  </div>
+
+</form>
+</body>
+</html>

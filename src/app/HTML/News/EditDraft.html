@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="../../../css/editor.css">
+<link rel="stylesheet" href="../../../css/style.css">
+
+<form class="example-form">
+
+  <div class="form-title">
+    <h4 style="color:#fafaff;">Edit Draft :</h4>
+  </div>
+
+
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="example-full-width" style="width: 800px">
+      <input mdInput placeholder="Title" [(ngModel)]="title" name="title">
+
+    </md-input-container></td>
+  </tr></table>
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><md-input-container class="example-full-width" style="width: 800px">
+      <input mdInput placeholder="Short Description"  [(ngModel)]="short" name="short">
+
+    </md-input-container></td>
+  </tr></table>
+  <ckeditor [(ngModel)]="ckeditorContent" name="ckeditor"></ckeditor>
+
+  <div class="example-container">
+    <div class="example-button-row">
+      <a md-raised-button (click)="EditDraft()">Edit Draft</a>
+    </div>
+
+  </div>
+</form>

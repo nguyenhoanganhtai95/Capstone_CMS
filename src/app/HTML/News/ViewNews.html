@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../../../css/style.css">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+</head>
+<body>
+
+<form class="example-form">
+
+  <div class="form-title">
+    <h4 style="color:#fafaff;">View News :</h4>
+  </div>
+  <div class="form-group">
+    <div>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </table>
+      <table>
+        <div class="round_content" *ngFor="let news of data">
+          <tr>
+            <td class="account_fullname">
+              {{news.title}}
+            </td>
+            <td class="account_status">{{news.post}}</td>
+            <td class = account_btn>
+              <div class="account_button">
+                <div class="create_btn"><a (click)="edit(news._id)">Edit</a></div>
+                <div class="create_btn"><a (click)="deactivate(news._id)">Deactivate</a></div>
+                <div class="create_btn"><a (click)="postss(news._id)" class="btn">Post</a></div>
+
+              </div>
+
+            </td>
+          </tr>
+
+          <!--<td style="width: 50px">-->
+          <!--<div>true</div>-->
+          <!--</td>-->
+
+
+        </div>
+      </table>
+    </div>
+  </div>
+
+</form>
+</body>
+</html>

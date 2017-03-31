@@ -1,0 +1,32 @@
+
+<link rel="stylesheet" href="../../../css/style.css">
+<form class="example-form">
+
+  <div class="form-title">
+    <h4 style="color:#fafaff;">Edit Account :</h4>
+  </div>
+  <div style="text-align: center" >
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><md-input-container class="example-full-width" style="width: 800px">
+        <input [(ngModel)]="fullname" name="fullname" mdInput placeholder="Full Name" >
+      </md-input-container></td>
+
+    </tr>
+
+    </table>
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><md-input-container class="example-full-width" style="width: 800px">
+        <input [(ngModel)]="email" name="email" mdInput placeholder="Email">
+      </md-input-container></td>
+    </tr></table>
+
+  </div>
+
+
+  <div class="example-container" *ngFor="let account of data">
+    <div class="create_btn" (click)="Editaccount(fullname,email)" style="float:none;"><a>Edit</a></div>
+  </div>
+
+
+
+</form>
