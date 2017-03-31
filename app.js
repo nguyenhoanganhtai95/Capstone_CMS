@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 // redireciona todas as requições para o Angular 2
 app.all('*', function(req, res) {
   res.status(200).sendFile(
-    path.join(__dirname, 'dist', 'index.html'));
+    path.join(__dirname, 'src', 'index.html'));
 });
 
 app.listen(app.get('port'), function() {
