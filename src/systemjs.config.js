@@ -35,7 +35,7 @@
       "ng2-ckeditor": {
         "main": "lib/index.js",
         "defaultExtension": "js",
-        "config.extraPlugins": 'myplugin,anotherplugin',
+        "config.extraPlugins": 'uploadimage'
       },
       'ng2-file-upload' : {
         main: './ng2-file-upload.js',

@@ -21,14 +21,16 @@ export class NewsComponent implements OnInit{
   ckeditorContent="";
 username = JSON.parse(localStorage.getItem('currentUser'));
   constructor(public router: Router, public http: Http) {
+
   }
 
-ngOnInit()
-{
+ngOnInit() {
 
+  CKEDITOR.replace( 'editor1' ,
+    {
 
+    });
 }
-
   CreateDraft(title:any,shortbrief:any): void {
   alert(this.ckeditorContent);
     let headers = new Headers({ 'Content-Type': 'application/json' });
