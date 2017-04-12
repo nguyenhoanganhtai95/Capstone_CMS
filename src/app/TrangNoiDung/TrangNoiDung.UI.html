@@ -1,0 +1,38 @@
+<div id="content">
+  <div id="content_fix">
+    <div id="content_left">
+      <div *ngFor="let tin of tintuc">
+
+        <h1>{{tin.category}}</h1>
+        <!--*************Content row*****************-->
+        <div id="row_content">
+          <div id="route">Tin tức > {{tin.category}}</div>
+          <div id="share"></div>
+          <div id="news_noidung">
+            <div id="news_detail_title">{{tin.title}}</div>
+            <div id="news_postdate">{{tin.createdate}}</div>
+            <div id="news_des">{{tin.shortbrief}}</div>
+            <!--<div id="news_detail_image"><img src="../../Image/banner_cmu.png" alt=""></div>-->
+            <div [innerHTML]="tin.content"></div>
+            <span id="owner">{{tin.owner}}</span>
+          </div>
+        </div>
+      </div>
+      <hr id="last">
+      <div id="news_related">
+        <div id="news_related_header">
+          <h3>Tin liên quan</h3>
+        </div>
+        <div *ngFor="let tin of news" id="news_title">
+          <h3 (click)="Nav(tin._id)">{{tin.title}}</h3>
+        </div>
+      </div>
+    </div>
+    <div id="content_right">
+      <menu-second></menu-second>
+    </div>
+  </div>
+</div>
+<script>
+
+</script>
